@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <title>Đăng Nhập</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h2>🔐 Vui lòng nhập ngày yêu nhau để vào trang tình yêu</h2>
+    <input type="password" id="password" placeholder="Nhập mật khẩu...">
+    <button onclick="checkPassword()">Vào trang</button>
+    <p id="error" style="color:red;"></p>
+  </div>
+ <script>
+  function checkPassword() {
+    const input = document.getElementById("password").value;
+    const error = document.getElementById("error");
+    if (input === "12062025") {
+      window.location.href = "index.html";
+    } else {
+      error.textContent = "Sai mật khẩu rồi 😢";
+    }
+  }
+
+  // Thêm sự kiện nhấn Enter
+  document.getElementById("password").addEventListener("keydown", function(event) {
+    if (event.key === "Enter") {
+      checkPassword();
+    }
+  });
+</script>
+</body>
+</html>

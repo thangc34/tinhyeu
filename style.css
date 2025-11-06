@@ -1,0 +1,29 @@
+body {
+  font-family: sans-serif;
+  background: linear-gradient(to right, #ff9a9e, #fad0c4);
+  text-align: center;
+  padding: 20px;
+}
+
+h1 {
+  color: #e91e63;
+}
+
+#puzzle-container {
+  width: 300px;
+  height: 300px;
+  margin: 20px auto;
+  display: flex;
+  flex-wrap: wrap;
+  border: 2px solid #e91e63;
+}
+
+.tile {
+  width: 100px;
+  height: 100px;
+  box-sizing: border-box;
+  border: 1px solid #fff;
+  background-image: url('love.jpg');
+  background-size: 300px 300px;
+  cursor: pointer;
+}
